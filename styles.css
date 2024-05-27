@@ -545,6 +545,10 @@ h2 {
     align-items: center;
 }
 
+a {
+    text-decoration: none;
+}
+
 .contactsImg {
     max-width: 359px;
     width: 100%;
@@ -748,6 +752,22 @@ main {
         display: none;
     }
 
+    .arrow {
+        position: absolute;
+        top: 50%;
+        right: 40px;
+        transform: translateY(-50%) rotate(-90deg);
+        display: block;
+        width: 20px;
+        height: 20px;
+        stroke: #656C82;
+    }
+
+    .arrowActive {
+        stroke: white;
+        transform: translateY(-50%) translateX(6px) rotate(-270deg);
+    }
+
     .offerInner {
         max-width: unset;
     }
@@ -877,6 +897,10 @@ main {
     .contactsWrapper {
         flex-direction: column;
     }
+
+    header {
+        padding: 20px;
+    }
 }
 
 @media (max-width: 567px) {
@@ -907,7 +931,7 @@ main {
 
     header {
         top: 20px;
-        padding: 23px;
+        padding: 20px;
     }
 
     .banner {
@@ -1002,19 +1026,5 @@ main {
         bottom: 65px;
     }
 
-    .arrow {
-        position: absolute;
-        top: 50%;
-        right: 40px;
-        transform: translateY(-50%) rotate(-90deg);
-        display: block;
-        width: 20px;
-        height: 20px;
-        stroke: #656C82;
-    }
 
-    .arrowActive {
-        stroke: white;
-        transform: translateY(-50%) translateX(6px) rotate(-270deg);
-    }
 }
