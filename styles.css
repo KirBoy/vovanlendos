@@ -752,6 +752,12 @@ main {
         display: none;
     }
 
+    .login {
+        margin: 0;
+    }
+    .register {
+        margin: 0;
+    }
     .arrow {
         position: absolute;
         top: 50%;
@@ -939,6 +945,7 @@ main {
         height: 223px;
         margin-top: 23px;
     }
+
 
     h2 {
         font-size: 32px;
