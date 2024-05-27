@@ -598,6 +598,8 @@ footer p {
 }
 
 .faqInner {
+    position: relative;
+    z-index: 1;
     max-width: 562px;
     margin-left: auto;
 }
@@ -718,7 +720,37 @@ main {
     overflow: hidden;
 }
 
+.blob {
+    position: relative;
+}
 
+.blob:after {
+    position: absolute;
+    content: '';
+    width: 600px;
+    height: 600px;
+    left: 0;
+    top: 0;
+
+    border-radius: 50%;
+    background-color: #EABA22;
+    opacity: 0.3;
+    filter: blur(100px);
+}
+
+.blob1 {
+    display: none;
+}
+
+.offerIMG {
+    position: relative;
+    z-index: 1;
+}
+.faqImg {
+    position: relative;
+    z-index: 1 ;
+    top: -150px;
+}
 @media (max-width: 1200px) {
     .login {
         margin-right: 12px;
@@ -735,6 +767,7 @@ main {
     }
 
     .offerIMG {
+
         width: 400px;
     }
 
@@ -744,14 +777,37 @@ main {
 
     .faqImg {
         width: 400px;
+        top: unset;
     }
+
+    .blob:after {
+        position: absolute;
+        content: '';
+        width: 400px;
+        height: 400px;
+
+
+    }
+
 }
+
 
 @media (max-width: 991px) {
     .auth-buttons {
         display: none;
     }
+    .blob1 {
+        display: block;
 
+    }
+    .blob1:after {
+        left:  50%;
+        transform: translateX(-50%);
+    }
+    .blob2 {
+        display: none;
+
+    }
     .login {
         margin: 0;
     }
@@ -839,23 +895,22 @@ main {
         display: none;
     }
 
+    .features {
+        padding-bottom: 50px;
+    }
     .featureSection {
         flex-direction: column;
     }
 
     .offerIMGMB {
+        position: relative;
+        z-index: 1  ;
         display: block;
         width: 400px;
         margin: 0 auto 28px auto;
     }
 
-    .blob {
-        position: relative;
-    }
 
-    .blob:after {
-        content: '';
-    }
 
     .offersWrapper {
         flex-direction: column;
@@ -916,6 +971,7 @@ main {
     }
 
     .title {
+        max-width: 344px;
         text-align: center;
         font-size: 26px;
         line-height: 35.52px;
@@ -959,6 +1015,7 @@ main {
 
     .features h3 {
         font-size: 28px;
+        line-height: 38.25px;
     }
 
     .hash {
