@@ -796,7 +796,9 @@
 
         <div class="container">
             <span class="hash">#Преимущества</span>
-            <h2>Наши фичи</h2>
+            <h2>Наши фичи
+            <div class="blobWhite"></div>
+            </h2>
             <div class="features">
                 <div class="featureSection">
                     <div class="featureTop">
@@ -819,7 +821,7 @@
                             <li>Отзывчивые менеджеры</li>
                             <li>Один из самых низких admin fee на рынке</li>
                             <li>Принимаем любой вид трафика</li>
-                            <li>Выкупаем трафик любой на глубине</li>
+                            <li>Выкупаем трафик любых объемов</li>
                         </ol>
                     </div>
                 </div>
@@ -837,7 +839,9 @@
             <div class="offersWrapper">
                 <div class="offerInner">
                     <span class="hash">#Офферы</span>
-                    <h2>Согласуем любой тип оффера для каждого вебмастера</h2>
+                    <h2>Согласуем любой тип оффера для каждого вебмастера
+                    <div class="blobWhite"></div>
+                    </h2>
                     <p>Игроки остаются с нами после первого депозита, потому что всегда находят что-то для себя среди
                         тысячи
                         развлечений.</p>
@@ -1126,7 +1130,6 @@
 
         button.addEventListener('click', (e) => {
 
-            console.log(faqAnswer.scrollHeight, button.scrollHeight)
             button.classList.toggle('activeFAQ');
             console.log(button)
             if (button.classList.contains('activeFAQ')) {
@@ -1142,42 +1145,69 @@
         });
     });
 
-
-    document.querySelectorAll('.offerButton').forEach(el => {
-        el.addEventListener('click', () => {
-            document.querySelectorAll('.hint').forEach(element => {
-                // Удаляем класс "exampleClass" у каждого элемента
-                element.classList.remove('active');
-
-            });
-            document.querySelectorAll('.arrow').forEach(element => {
-                // Удаляем класс "exampleClass" у каждого элемента
-                element.classList.remove('arrowActive');
-
-            });
-
-            document.querySelectorAll('.offerButton').forEach(element => {
-                // Удаляем класс "exampleClass" у каждого элемента
-                element.classList.remove('offerButtonActive');
-
-            });
-        });
-    })
+    //
+    // document.querySelectorAll('.offerButton').forEach(el => {
+    //     el.addEventListener('click', (e) => {
+    //
+    //         if  ( e.target.classList.toggle('offerButtonActive')) return
+    //         document.querySelectorAll('.hint').forEach(element => {
+    //             // Удаляем класс "exampleClass" у каждого элемента
+    //             element.classList.toggle('active');
+    //
+    //         });
+    //         document.querySelectorAll('.arrow').forEach(element => {
+    //             // Удаляем класс "exampleClass" у каждого элемента
+    //             element.classList.toggle('arrowActive');
+    //
+    //         });
+    //
+    //         document.querySelectorAll('.offerButton').forEach(element => {
+    //             // Удаляем класс "exampleClass" у каждого элемента
+    //             element.classList.toggle('offerButtonActive');
+    //
+    //         });
+    //     });
+    // })
 
     document.querySelector('.offerButton1').addEventListener('click', (e) => {
-        e.target.classList.add('offerButtonActive')
-        document.querySelector('.arrow1').classList.add('arrowActive')
-        document.querySelector('.hint1').classList.add('active')
+
+        e.target.classList.toggle('offerButtonActive')
+        document.querySelector('.arrow1').classList.toggle('arrowActive')
+        document.querySelector('.hint1').classList.toggle('active')
+
+        document.querySelector('.offerButton2').classList.remove('offerButtonActive')
+        document.querySelector('.arrow2').classList.remove('arrowActive')
+        document.querySelector('.hint2').classList.remove('active')
+
+        document.querySelector('.offerButton3').classList.remove('offerButtonActive')
+        document.querySelector('.arrow3').classList.remove('arrowActive')
+        document.querySelector('.hint3').classList.remove('active')
     });
     document.querySelector('.offerButton2').addEventListener('click', (e) => {
-        e.target.classList.add('offerButtonActive')
-        document.querySelector('.arrow2').classList.add('arrowActive')
-        document.querySelector('.hint2').classList.add('active')
+        e.target.classList.toggle('offerButtonActive')
+        document.querySelector('.arrow2').classList.toggle('arrowActive')
+        document.querySelector('.hint2').classList.toggle('active')
+
+        document.querySelector('.offerButton1').classList.remove('offerButtonActive')
+        document.querySelector('.arrow1').classList.remove('arrowActive')
+        document.querySelector('.hint1').classList.remove('active')
+
+        document.querySelector('.offerButton3').classList.remove('offerButtonActive')
+        document.querySelector('.arrow3').classList.remove('arrowActive')
+        document.querySelector('.hint3').classList.remove('active')
     });
     document.querySelector('.offerButton3').addEventListener('click', (e) => {
-        e.target.classList.add('offerButtonActive')
-        document.querySelector('.arrow3').classList.add('arrowActive')
-        document.querySelector('.hint3').classList.add('active')
+        e.target.classList.toggle('offerButtonActive')
+        document.querySelector('.arrow3').classList.toggle('arrowActive')
+        document.querySelector('.hint3').classList.toggle('active')
+
+        document.querySelector('.offerButton1').classList.remove('offerButtonActive')
+        document.querySelector('.arrow1').classList.remove('arrowActive')
+        document.querySelector('.hint1').classList.remove('active')
+
+        document.querySelector('.offerButton2').classList.remove('offerButtonActive')
+        document.querySelector('.arrow2').classList.remove('arrowActive')
+        document.querySelector('.hint2').classList.remove('active')
     });
     const burger = document.querySelector('.burgerMenu')
     document.querySelector('.headerBTN').addEventListener('click', (e) => {
@@ -1192,7 +1222,7 @@
             console.log(e.target)
             return
         }
-        console.log(212)
+
         burger.classList.remove('burgerMenuActive')
         document.querySelector('main').style.filter = 'unset';
     })
