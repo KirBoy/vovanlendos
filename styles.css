@@ -759,6 +759,10 @@ h2 {
     filter: blur(100px);
 }
 
+.right:after {
+    right: 0;
+}
+
 .blob1 {
     display: none;
 }
