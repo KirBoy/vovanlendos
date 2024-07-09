@@ -522,17 +522,13 @@ h2 {
     position: absolute;
     top: 0;
     right: -350px;
-    background-image: url("./images/fon.png");
-    background-size: contain;
-    width: 317px;
-    height: 102px;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: url(./images/fon.png);
+    background-size: cover;
     font-size: 14px;
     font-weight: 400;
     line-height: 19.12px;
     text-align: left;
-    padding: 18px 24px 12px 40px;
+    padding: 12px 24px 12px 40px;
     transition: opacity 0.2s linear;
 }
 
@@ -1041,8 +1037,9 @@ h2 {
         margin: 0 auto;
         position: static;
         background-image: url("./images/Union.png");
-        background-size: contain;
+        background-size: cover;
         max-width: 345px;
+        width: 100%;
         opacity: 0;
         height: 0px;
         padding: 0 24px 13px;
