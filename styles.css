@@ -42,6 +42,46 @@ header {
 
 }
 
+.payments {
+    padding: 152px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px 100px;
+}
+
+.payment1 {
+    width: 246px;
+}
+
+.payment2 {
+    width: 193px;
+}
+
+.payment3 {
+    width: 219px;
+}
+
+.payment4 {
+    width: 59px;
+}
+
+.payment5 {
+    width: 93px;
+}
+
+.payment6 {
+    width: 188px;
+}
+
+.payment7 {
+    width: 179px;
+}
+
+.payment8 {
+    width: 173px;
+}
+
 .hero {
     background: url('./images/BackGround.png') no-repeat center center/cover;
     padding-top: 175px;
@@ -178,6 +218,11 @@ header {
     height: 44px;
     right: 1000000px;
     top: 100px
+}
+
+.dumb {
+    width: 1px;
+    height: 44px;
 }
 
 .scroll1 {
@@ -478,12 +523,16 @@ h2 {
     top: 0;
     right: -350px;
     background-image: url("./images/fon.png");
-    background-size: cover;
+    background-size: contain;
+    width: 317px;
+    height: 102px;
+    background-position: center;
+    background-repeat: no-repeat;
     font-size: 14px;
     font-weight: 400;
     line-height: 19.12px;
     text-align: left;
-    padding: 12px 24px 12px 40px;
+    padding: 18px 24px 12px 40px;
     transition: opacity 0.2s linear;
 }
 
@@ -514,9 +563,8 @@ h2 {
     background: linear-gradient(271.51deg, #161A2A -15.88%, #FFFFFF 17.81%, #FFFFFF 77.12%, #141825 121.85%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 86px;
-    padding-bottom: 48px;
 
+    padding-bottom: 48px;
     border-bottom: 2px solid #191B26;
 
 
@@ -773,11 +821,17 @@ h2 {
     position: relative;
     z-index: 1;
 }
+
 .faqImg {
     position: relative;
-    z-index: 1 ;
+    z-index: 1;
     top: -150px;
 }
+
+.langMB {
+    display: none;
+}
+
 @media (max-width: 1200px) {
     .login {
         margin-right: 12px;
@@ -819,13 +873,32 @@ h2 {
 }
 
 
+.lang {
+    border-radius: 50%;
+}
+
+@media (max-width: 1200px) {
+    header {
+        padding: 25px;
+    }
+}
+
 @media (max-width: 991px) {
     .auth-buttons {
         display: none;
     }
+
     .blob1 {
         display: block;
 
+    }
+
+    .lang {
+        display: none;
+    }
+
+    .langMB {
+        display: inline-block;
     }
 
     .offers h2 {
@@ -833,19 +906,23 @@ h2 {
     }
 
     .blob1:after {
-        left:  50%;
+        left: 50%;
         transform: translateX(-50%);
     }
+
     .blob2 {
         display: none;
 
     }
+
     .login {
         margin: 0;
     }
+
     .register {
         margin: 0;
     }
+
     .arrow {
         position: absolute;
         top: 50%;
@@ -930,18 +1007,22 @@ h2 {
     .features {
         padding-bottom: 50px;
     }
+
     .featureSection {
         flex-direction: column;
     }
 
     .offerIMGMB {
         position: relative;
-        z-index: 1  ;
+        z-index: 1;
         display: block;
         width: 400px;
         margin: 0 auto 28px auto;
     }
 
+    .payments {
+        padding: 100px 0;
+    }
 
 
     .offersWrapper {
@@ -960,7 +1041,7 @@ h2 {
         margin: 0 auto;
         position: static;
         background-image: url("./images/Union.png");
-        background-size: cover;
+        background-size: contain;
         max-width: 345px;
         opacity: 0;
         height: 0px;
@@ -1027,7 +1108,7 @@ h2 {
 
     header {
         top: 20px;
-        padding: 20px;
+        padding: 20px 10px;
     }
 
     .banner {
@@ -1124,5 +1205,44 @@ h2 {
         bottom: 65px;
     }
 
+    .payments {
+        gap: 20px;
+        padding: 77px 0;
+    }
 
+    .payment1 {
+        width: 172px;
+    }
+
+    .payment2 {
+        width: 134px;
+    }
+
+    .payment3 {
+        width: 180px;
+    }
+
+    .payment4 {
+        width: 40px;
+    }
+
+    .payment5 {
+        width: 68px;
+    }
+
+    .payment6 {
+        width: 105px;
+    }
+
+    .payment7 {
+        width: 100px;
+    }
+
+    .payment8 {
+        width: 96px;
+    }
+
+    .contactIcon + .contactIcon {
+        margin-left: 16px;
+    }
 }
