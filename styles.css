@@ -536,6 +536,68 @@ h2 {
     opacity: 1;
 }
 
+.important {
+    position: relative;
+}
+.outside {
+    right: 0;
+    bottom: 10%;
+    text-decoration: none;
+    position: absolute;
+    width: 196px;
+    height: 196px;
+    background-color: rgba(24, 26, 38, 0.8);
+    border: 1px solid rgba(43, 51, 77, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.guide {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #EABB22 0%, #CB6E01 100%);
+    width: 164px;
+    height: 164px;
+    border: 1px solid #FFFFFF;
+
+}
+
+.guide:after {
+    content: '';
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+    border: 2px dashed #FFD559;
+    animation: rotate 25s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.guideText {
+    max-width: 100px;
+    font-family: Manrope;
+    font-size: 16.24px;
+    font-weight: 800;
+    line-height: 22.18px;
+    color: #FFFFFF;
+
+    text-transform: uppercase;
+}
+
 
 .contacts {
     background-color: #0F1118;
@@ -1241,5 +1303,11 @@ h2 {
 
     .contactIcon + .contactIcon {
         margin-left: 16px;
+    }
+
+    .outside {
+        scale: 0.75;
+        bottom: -10%;
+        right: -30%;
     }
 }
